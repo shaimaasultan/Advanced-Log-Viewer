@@ -17,7 +17,7 @@ A modular, browser-based log analysis tool designed for forensic inspection and 
 
 ## 🖼️ Screenshot
 
-![Advanced Log Viewer Dashboard](screenshot.png)  
+![Advanced Log Viewer Dashboard](Screenshot 2025-10-17 144314.png)  
 *Example dashboard view with active filters and log breakdown.*
 
 ## 🚀 Getting Started
