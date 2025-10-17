@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📊 Log Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
+
+</head>
+<body>
+  <header>
+    <h1>📁 Log Dashboard</h1>
+    <nav>
+      <a href="LogViewer.html">📄 Log Viewer</a>
+      <span> | </span>
+      <a href="LogDashboard.html">📊 Dashboard</a>
+    </nav>
+    <p id="folderName"></p>
+  </header>
+
+  <div id="loading">⏳ Loading dashboard...</div>
+
+
+  <section class="charts">
+  <label for="kpiDropdown">Select KPI:</label>
+  <select id="kpiDropdown" onchange="renderKPIChart()">
+    <option value="">-- Choose a KPI --</option>
+    <option value="logVolume">Log Volume Over Time</option>
+    <option value="errorRate" selected>Error Rate by Log Type</option>
+    <option value="topErrors">Top Error Sources</option>
+    <option value="anomaly">Anomaly Detection</option>
+    <option value="resolutionTime">Time to Resolution</option>
+    <option value="criticalTimeline">Critical Event Timeline</option>
+    <option value="heatmap">Log Density Heatmap</option>
+    <option value="uptime">System Uptime vs Downtime</option>
+    <option value="userImpact">User Impact Estimation</option>
+    <option value="logSource">Log Source Distribution</option>
+  </select>
+
+  <label for="fileTypeSelect">File Type:</label>
+<select id="fileTypeSelect" onchange="loadDashboardFromIDB()">
+  <option value="json">JSON Files (.json)</option>
+  <option value="txt">Text Files (.txt)</option>
+  <option value="both">Both (.json & .txt)</option>
+</select>
+
+  </section>
+
+  <div class="dashboard-layout">
+  <canvas id="kpiChart"></canvas>
+
+  <ul id="timeline" class="timeline"> </ul>
+  </div>
+
+
+  <script src="idb.js"></script>
+  <script src="dashboard.js"></script>
+
+  <script>
+    
+  </script>
+</body>
+</html>

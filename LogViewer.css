@@ -1,0 +1,229 @@
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button, input, select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+}
+
+button:hover, input:focus, select:focus {
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.3);
+  outline: none;
+}
+
+.error-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.error-summary div {
+  white-space: nowrap;
+}
+
+.top-errors {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.log-entry {
+  margin-bottom: 10px;
+  border-left: 4px solid #ccc;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.INFO { border-left-color: #4caf50; background-color: #e7f4e4; }
+.ERROR { border-left-color: #f44336; background-color: #fbeaea; }
+.WARNING { border-left-color: #ff9800; background-color: #fff8e1; }
+.DEBUG { border-left-color: #00bcd4; background-color: #e0f7fa; }
+
+.log-entry.info { background-color: #e0f7fa; }
+.log-entry.warning { background-color: #fff3cd; }
+.log-entry.error { background-color: #f8d7da; }
+.log-entry.debug { background-color: #e8f5e9; }
+.log-entry.critical { background-color: #fbe9e7; }
+
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#pageInfo {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sticky-controls {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9f9fb;
+  padding-top: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+#summary {
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+#summary p {
+  margin: 5px 0;
+}
+#topErrors li {
+  margin-left: 20px;
+}
+
+.error-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.error-summary div {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.top-errors {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+#topErrors {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#topErrors li::before {
+  content: "🐞 ";
+}
+.error-summary div {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+#dateFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#dateFilters label {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+#dateFilters input[type="datetime-local"] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  padding: 6px 12px;
+  background-color: #0088d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #005A9E;
+  transform: scale(1.03);
+}
+
+.button:active {
+  background-color: #004578;
+  transform: scale(0.98);
+}
+
+
+

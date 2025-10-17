@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <title>Advanced Log Viewer</title>
+  <link rel="stylesheet" href="LogViewer.css" />
+</head>
+<body>
+  <header>
+    <h1>📁 Advanced Log Viewer</h1>
+    <nav>
+      <a href="LogViewer.html">📄 Log Viewer</a>
+      <span> | </span>
+      <a href="LogDashboard.html">📊 Dashboard</a>
+    </nav>
+  </header>
+<div class="folder-path">
+  
+</div>
+
+
+  <div class="sticky-controls">
+    <div class="controls">
+      <button class="button" onclick="pickFolder()">Choose Log Folder</button>
+      <input type="text" id="searchInput" placeholder="Search logs..." oninput="filterLogs()" />
+      <label for="fileTypeSelect">File Type:</label>
+      <select id="fileTypeSelect" onchange="loadLogs()">
+        <option value="both">Both (.txt & .json)</option>
+        <option value="txt">Text Files (.txt)</option>
+        <option value="json">JSON Files (.json)</option>
+      </select>
+
+
+      <select id="levelFilter" onchange="filterLogs()">
+        <option value="">All Levels</option>
+        <option value="INFO">INFO</option>
+        <option value="ERROR">ERROR</option>
+        <option value="CRITICAL">CRITICAL</option>
+        <option value="WARNING">WARNING</option>
+        <option value="DEBUG">DEBUG</option>
+      </select>
+      <button class="button" onclick="exportCSV()">Export to CSV</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="error-summary">
+      <div>📋 Total Logs: <span id="totalLogs">0</span></div>
+      <div>✅ Info: <span id="infoCount">0</span></div>
+      <div>❌ Errors: <span id="errorCount">0</span></div>
+      <div>⚠️ Warnings: <span id="warningCount">0</span></div>
+      <div>🔥 Critical: <span id="criticalCount">0</span></div>
+      <div>🔍 Total Bugs: <span id="bugCount">0</span></div>
+      <div>📊 Error Rate: <span id="errorRate">0%</span></div>
+      📂Folder:
+      <label type="text" id="manualPath" placeholder="Choose Log Folder (e.g., C:\log)" />
+    </div>
+
+    <div class="top-errors">
+      <fieldset id="dateFilters">
+        <legend>Filter by TimeStamp</legend>
+        <label for="fromDate">From:</label>
+      <input type="datetime-local" id="fromDate">
+
+      <label for="toDate">To:</label>
+      <input type="datetime-local" id="toDate">
+      <button class="button" onclick="filterLogs()">Apply Filter</button>
+      <button class="button" onclick="applyLast7Days()">Last 7 Days</button>
+      <button class="button" onclick="clearFilters()">Clear Filters</button>
+      </fieldset>
+      
+      <button class="button" onclick="prevPage()">⬅ Prev</button>
+      <span id="pageInfotop">Page 1 of 1</span>
+      <button class="button" onclick="nextPage()">Next ➡</button>
+    </div>
+
+    <section id="logContainer"></section>
+
+    <div class="pagination">
+      <button onclick="prevPage()">⬅ Prev</button>
+      <span id="pageInfo">Page 1 of 1</span>
+      <button onclick="nextPage()">Next ➡</button>
+    </div>
+  </main>
+
+  <script src="idb.js"></script>
+  <script src="LogViewer.js"></script>
+</body>
+</html>
