@@ -16,9 +16,9 @@ A modular, browser-based log analysis tool designed for forensic inspection and 
 - ⏱️ **Quick Time Filters**: "Last 7 Days" shortcut for rapid triage.
 
 ## 🖼️ Screenshot
-
-![Advanced Log Viewer Dashboard](Screenshot 2025-10-17 144314.png)  
 *Example dashboard view with active filters and log breakdown.*
+<image src="Screenshot 2025-10-17 144314.png" />
+<image src="Screenshot 2025-10-17 144547.png" />
 
 ## 🚀 Getting Started
 
@@ -29,8 +29,7 @@ A modular, browser-based log analysis tool designed for forensic inspection and 
 
 3. Select a folder and start analyzing!
 
-🧠 Built With Copilot
-This project was created with the help of Microsoft Copilot, blending modular design with forensic-grade precision.
+🧠This project was created with the help of Microsoft Copilot, blending modular design with forensic-grade precision.
 
 📄 License
 This project is licensed under the MIT License.
