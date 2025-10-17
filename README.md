@@ -19,6 +19,8 @@ A modular, browser-based log analysis tool designed for forensic inspection and 
 *Example dashboard view with active filters and log breakdown.*
 <image src="Screenshot 2025-10-17 144314.png" />
 <image src="Screenshot 2025-10-17 144547.png" />
+<image src="Screenshot 2025-10-17 145042.png" />
+<image src="Screenshot 2025-10-17 145158.png" />
 
 ## 🚀 Getting Started
 
